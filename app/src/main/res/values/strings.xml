@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Math Quiz</string>
+    <string name="MenuScreenName">Math Quiz</string>
+    <string name="playbuttontext">play</string>
+    <string name="default_expression">2+2</string>
+    <string name="title_activity_playing2">PlayingActivity2</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_cat_male">Кот</string>
+    <string name="action_cat_female">Кошка</string>
+    <string name="action_kitten">Котёнок</string>
+</resources>
