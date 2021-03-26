@@ -46,11 +46,11 @@
         tools:ignore="RtlCompat" />
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_weight="20"
-    style="?android:attr/buttonBarStyle"
-    android:background="@color/design_default_color_primary_dark">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        style="?android:attr/buttonBarStyle"
+        android:background="@color/design_default_color_primary_dark">
 
         <Button
             android:id="@+id/first_button"
@@ -71,7 +71,7 @@
             android:text="3"
             android:textColor="#FFF"
             android:textSize="24sp" />
-</LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/button1"
