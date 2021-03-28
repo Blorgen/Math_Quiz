@@ -1,5 +1,6 @@
 package com.blorgen.mathquiz
 
+import android.graphics.Color.red
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -72,10 +73,18 @@ class PlayingActivity : AppCompatActivity(), View.OnClickListener {
             answersMaker()
             rightCount++
             tvRightCount.text = "Right: " + rightCount
+//          --------------------------
+            btnOne.isEnabled = true
+            btnTwo.isEnabled = true
+            btnThree.isEnabled = true
+            btnFour.isEnabled = true
         } else {
             text = "You are wrong"
             wrongCount++
             tvWrongCount.text = "Wrong: " + wrongCount
+//          --------------------------
+            btn.isEnabled = false
+            btn.text = "NOPE"
         }
 
     }
