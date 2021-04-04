@@ -9,6 +9,8 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.MathQuiz">
+        <activity android:name=".SettingsActivity">
+        </activity>
         <activity android:name=".PlayingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
