@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="summ"
+        app:title="Turn on +"/>
+
+    <SwitchPreferenceCompat
+        app:key="minus"
+        app:title="Turn on -"/>
+
+    <SwitchPreferenceCompat
+        app:key="multiply"
+        app:title="Turn on *"/>
+
+    <SwitchPreferenceCompat
+        app:key="divide"
+        app:title="Turn on /"/>
+
+
+</PreferenceScreen>
