@@ -2,20 +2,24 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreferenceCompat
-        app:key="summ"
-        app:title="Turn on +"/>
+        app:key="sum"
+        app:title="Turn on +"
+        app:enabled="true"/>
 
     <SwitchPreferenceCompat
         app:key="minus"
-        app:title="Turn on -"/>
+        app:title="Turn on -"
+        app:enabled="true"/>
 
     <SwitchPreferenceCompat
         app:key="multiply"
-        app:title="Turn on *"/>
+        app:title="Turn on *"
+        app:enabled="true"/>
 
     <SwitchPreferenceCompat
         app:key="divide"
-        app:title="Turn on /"/>
+        app:title="Turn on /"
+        app:enabled="true"/>
 
 
 </PreferenceScreen>
