@@ -180,6 +180,7 @@ class PlayingActivity : AppCompatActivity(), View.OnClickListener {
         super.onRestoreInstanceState(savedInstanceState)
         wrongCount = savedInstanceState.getInt("wrong")
         rightCount = savedInstanceState.getInt("right")
+        //
         tvWrongCount.text = "Wrong: " + wrongCount
         tvRightCount.text = "Right: " + rightCount
 
