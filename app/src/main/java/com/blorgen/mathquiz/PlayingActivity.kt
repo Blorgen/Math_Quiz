@@ -1,19 +1,17 @@
 package com.blorgen.mathquiz
 
-import android.content.SharedPreferences
-import android.graphics.Color.red
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_playing.*
 import kotlin.random.Random
 
 class PlayingActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var text: String
     private lateinit var expression: TextView
     private var answer = 0.0
     private var first_arg = 0
@@ -163,12 +161,29 @@ class PlayingActivity : AppCompatActivity(), View.OnClickListener {
     override fun onResume() {
         super.onResume()
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        sumSwitch = sharedPreferences.getBoolean("sum",true)
-        minusSwitch = sharedPreferences.getBoolean("minus",true)
-        multiplySwitch = sharedPreferences.getBoolean("multiply",true)
-        divideSwitch = sharedPreferences.getBoolean("divide",true)
+        sumSwitch = sharedPreferences.getBoolean("sum", true)
+        minusSwitch = sharedPreferences.getBoolean("minus", true)
+        multiplySwitch = sharedPreferences.getBoolean("multiply", true)
+        divideSwitch = sharedPreferences.getBoolean("divide", true)
 
         expressionMaker()
         answersMaker()
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("wrong", wrongCount)
+        outState.putInt("right", rightCount)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        wrongCount = savedInstanceState.getInt("wrong")
+        rightCount = savedInstanceState.getInt("right")
+        tvWrongCount.text = "Wrong: " + wrongCount
+        tvRightCount.text = "Right: " + rightCount
+
+    }
+
+
 }
